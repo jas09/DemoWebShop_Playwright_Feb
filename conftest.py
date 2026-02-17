@@ -18,9 +18,11 @@ def browserInstance(playwright,request):
     base_url = URL_MAP.get(url_key)
     if browser_name == "chrome":
         browser = playwright.chromium.launch(headless=False,args=["--start-maximized"])
+        context = browser.new_context(noViewport=True)
     elif browser_name == "firefox":
         browser = playwright.firefox.launch(headless=False,args=["--start-maximized"])
-    context = browser.new_context()
+        context = browser.new_context(noViewport=True)
+    #context = browser.new_context()
     page = context.new_page()
     # Start tracing manually
     context.tracing.start(screenshots=True, snapshots=True, sources=True)
