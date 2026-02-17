@@ -12,10 +12,10 @@ def browserInstance(playwright,request):
     url_key = request.config.getoption("url_key")
     base_url = URL_MAP.get(url_key)
     if browser_name == "chrome":
-        browser = playwright.chromium.launch(headless=False,args=["--start-maximized"])
+        browser = playwright.chromium.launch(headless=True,args=["--start-maximized"])
         context = browser.new_context(no_viewport=True)
     elif browser_name == "firefox":
-        browser = playwright.firefox.launch(headless=False,args=["--start-maximized"])
+        browser = playwright.firefox.launch(headless=True,args=["--start-maximized"])
         context = browser.new_context(no_viewport=True)
     #context = browser.new_context()
     page = context.new_page()
