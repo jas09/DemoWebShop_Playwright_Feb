@@ -4,7 +4,7 @@ from playwright.sync_api import Page, expect
 from POM.LoginPage import LoginPage
 from POM.ShoppingCartPage import ShoppingCartPage
 
-test_data_path = "Data/Data_1.json"
+test_data_path = "Data/Data.json"
 try:
     with open(test_data_path) as f:
         test_data = json.load(f)

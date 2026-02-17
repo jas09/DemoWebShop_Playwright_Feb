@@ -35,7 +35,7 @@ class Utilities:
             'Gift Cards': "//ul[@class='top-menu']//a[normalize-space(text())='Gift Cards']"
         }
 
-    def update_order_number(self, new_order_number, json_file="Data/Data_1.json"):
+    def update_order_number(self, new_order_number, json_file="Data/Data.json"):
         """Append a new order number to the JSON file."""
         if os.path.exists(json_file):
             with open(json_file, "r+") as f:
