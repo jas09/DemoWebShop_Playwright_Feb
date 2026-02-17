@@ -1,0 +1,3 @@
+pytest test_demoWebShop_E2E.py -n 3 --browser_name chrome --tracing on --html=report.html
+
+pytest -v -s test_demoWebShop_E2E.py --browser_name firefox
