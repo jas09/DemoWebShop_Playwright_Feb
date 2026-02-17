@@ -4,12 +4,7 @@ def pytest_addoption(parser):
     parser.addoption("--browser_name", action="store", default="chrome", help="browser selection")
     parser.addoption("--url_key", action="store", default="DemoWebShop", help="Choose URL key")
 
-URL_MAP = {"GREENKART": "https://rahulshettyacademy.com/seleniumPractise/#/",
-           "UPLOAD_DOWNLOAD": "https://rahulshettyacademy.com/upload-download-test/index.html",
-           "CLIENT": "https://rahulshettyacademy.com/client/#/auth/login",
-           "PRACTICE": "https://rahulshettyacademy.com/AutomationPractice/",
-           "MOBILE_SHOP": "https://rahulshettyacademy.com/loginpagePractise/",
-           "DemoWebShop": "https://demowebshop.tricentis.com/"}
+URL_MAP = {"DemoWebShop": "https://demowebshop.tricentis.com/"}
 
 @pytest.fixture(scope="function")
 def browserInstance(playwright,request):
